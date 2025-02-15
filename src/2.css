@@ -1,0 +1,198 @@
+/* Reset and general styling */
+/* Add smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-weight: 300;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.full-screen {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--color-just-black, #000); /* Fallback for custom property */
+}
+
+#masthead {
+  position: fixed;
+  display: flex;
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 0.8); /* Optional for visibility */
+  width: 100%;
+}
+
+#masthead a {
+  padding: 1rem 2rem;
+  text-decoration: none;
+  color: #333; /* Navigation link color */
+  font-weight: bold;
+}
+
+#masthead a:hover {
+  color: #ff6600; /* Hover color */
+}
+
+/* Panels Section */
+#panels #panels-container {
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  background-color: #ddd; /* This is overridden in the JS animation */
+  width: 500%; /* For horizontal scrolling */
+}
+
+#panels #panels-container .panel {
+  color: #fff; /* Text color inside the panels */
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  background-color: #000; /* Default black background */
+  transition: background-color 1s ease, opacity 1s ease; /* Smooth background and opacity transition */
+  opacity: 1; /* Ensure the panels are initially visible */
+}
+
+#panels #panels-container .panel:nth-child(2) {
+  background-color: #808080; /* Grey background */
+}
+
+#panels #panels-container .panel:nth-child(3) {
+  background-color: #ffffff; /* White background */
+}
+
+#panels #panels-container .panel img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#panels #panels-container .panel .panels-navigation {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+#panels #panels-container .panel .anchor-panel,
+#panels #panels-container .panel .nav-panel {
+  text-transform: uppercase;
+  margin-right: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#panels #panels-container .panel .nav-panel a {
+  text-decoration: none;
+  color: #333; /* Navigation panel link color */
+}
+
+#panels #panels-container .panel .nav-panel a:hover {
+  color: #000000; /* Hover effect for nav panel links */
+}
+
+/* Clouds in Intro */
+#clouds-layer-1,
+#clouds-layer-2 {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.7); /* Example cloud layer color */
+  top: 50%; /* Center it */
+  animation: moveClouds 20s linear infinite;
+}
+
+#clouds-layer-2 {
+  top: 60%;
+  animation-duration: 25s;
+}
+
+@keyframes moveClouds {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Section Gradient Backgrounds (These are now removed as we're using solid colors) */
+.gradient-orange {
+  /* No need for this anymore */
+  background-color: #ff0000;
+  color: rgb(255, 84, 84);
+}
+
+.gradient-green {
+  /* No need for this anymore */
+  background: linear-gradient(to bottom, #555555, #2b2b2b);
+  color: white;
+}
+
+.gradient-blue {
+  /* No need for this anymore */
+  background: linear-gradient(to bottom, #00afff, #0066cc);
+  color: white;
+}
+
+/* Map Section */
+#map {
+  background-color: #000000; /* Keeping this grey for map */
+  color: #ff0000;
+  display: flex;
+  align-items: center;
+  justify-content: cent;
+}
+/* .line {
+    width: 100%;
+    max-width: 800px;
+    height: 50px;
+    margin: 0 0 10px 0;
+    position: relative;
+    display: flex;
+    background-color: rgb(0, 0, 0);
+  } */
+.prev-panel {
+  justify-content: flex-start;
+}
+
+.next-panel {
+  justify-content: flex-end;
+}
+.nav-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}

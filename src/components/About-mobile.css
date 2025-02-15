@@ -1,0 +1,280 @@
+/* About Section (three) */
+@media (max-width: 1250px) {
+  .three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+    justify-content: flex-start;
+    padding-top: 20px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  /* General Styling */
+  .about-me-text,
+  .pp,
+  .quote-heading {
+    background-color: inherit;
+    color: white;
+    mix-blend-mode: difference;
+  }
+
+  .explore-btn,
+  .explore-arrow {
+    background-color: inherit;
+    color: white;
+    mix-blend-mode: difference;
+    fill: black;
+  }
+
+  .about-me-container {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30%;
+  }
+
+  .about-me-svg {
+    width: 65%;
+    max-width: 400px;
+    height: auto;
+    z-index: 10;
+  }
+
+  .about-me-text {
+    z-index: 10;
+    position: absolute;
+    width: 404px;
+    height: 74px;
+    left: 0; /* Center inside container */
+    top: 50%;
+    transform: translateY(-50%); /* Center text vertically */
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 127.9%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.35538em;
+  }
+  /* Main Content */
+  .aboutContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* About Text */
+  .pp {
+    max-width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-size: 32px;
+    line-height: 1.4;
+  }
+
+  /* Video Container */
+  .videosContainer {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    background-color: black;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-top: 20px;
+  }
+
+  .videoContent {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  /* Quote Section */
+  .quote-heading {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
+
+  .quote-box {
+    width: 80%;
+    max-width: 600px;
+    background: linear-gradient(to right, #d3d3d3, #e0e0e0);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  .explore-btn {
+    display: none;
+  }
+  .quote-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+  }
+
+  .quote-author {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+    color: black;
+  }
+
+  .languages-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .lang-label {
+    color: #d7d7d7;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-right: 5px;
+  }
+
+  .lang-button {
+    font-family: "Montserrat", sans-serif;
+
+    position: relative;
+    padding: 8px 12px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+  }
+
+  .lang-button::after {
+    content: attr(data-hover); /* Get text from data-hover attribute */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    color: black;
+    font-weight: bold;
+  }
+
+  .lang-button:hover {
+    background-color: white;
+    color: transparent; /* Hide original text */
+  }
+
+  .lang-button:hover::after {
+    opacity: 1;
+  }
+
+  .lang-button.learning {
+    border-color: #f4c542;
+    color: #f4c542;
+    font-weight: bold;
+  }
+
+  .lang-button.learning:hover {
+    background-color: #f4c542;
+    color: black;
+  }
+}
+
+/* Responsive Design */
+/* @media (max-width: 1250px) {
+  
+  .three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 30px;
+  }
+
+  .about-me-container {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .about-me-svg {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .about-me-text {
+    font-size: 18px;
+    letter-spacing: 0.15em;
+  }
+
+  .pp {
+    font-size: 20px;
+    max-width: 90%;
+    margin: 15px;
+    text-align: center;
+  }
+
+  .videosContainer {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .movies-slider-container {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-me-text {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+  }
+
+  .pp {
+    font-size: 18px;
+  }
+
+  .quote-text {
+    font-size: 16px;
+  }
+
+  .quote-author {
+    font-size: 14px;
+  }
+
+  .videosContainer {
+    width: 90%;
+    max-width: 350px;
+  }
+} */

@@ -1,0 +1,55 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Prevent extra scrolling outside GSAP animation */
+  position: relative;
+}
+
+.menu {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+.menu a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.sections-container {
+  display: flex; /* Arrange sections in a row */
+  width: 500%; /* 100% per section * number of sections */
+  height: 100%;
+}
+
+.section {
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  flex-shrink: 0; /* Prevent shrinking */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Home {
+  background-color: #1e1e1e;
+}
+
+#About {
+  background-color: #ff5722;
+}
+
+#Projects {
+  background-color: #3f51b5;
+}
+
+#Skills {
+  background-color: #4caf50;
+}
+
+#Contact {
+  background-color: #9c27b0;
+}

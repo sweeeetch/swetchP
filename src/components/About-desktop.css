@@ -1,0 +1,269 @@
+/* About Section (three) */
+.three {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  justify-content: flex-start;
+  padding-top: 20px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.about-me-text,
+.pp,
+.quote-heading {
+  background-color: inherit;
+  color: white;
+  mix-blend-mode: difference;
+}
+.explore-btn,
+.explore-arrow {
+  background-color: inherit;
+  color: white;
+  mix-blend-mode: difference;
+  fill: black; /* Ensure SVG changes color */
+}
+
+.about-me-container {
+  position: relative;
+  top: 100px; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  gap: 20px; /* Adjust spacing */
+}
+
+.about-me-svg {
+  width: 65%;
+  max-width: 400px;
+  height: auto;
+}
+
+.about-me-text {
+  z-index: 1000;
+  position: absolute;
+  width: 404px;
+  height: 74px;
+  left: 0; /* Center inside container */
+  top: 50%;
+  transform: translateY(-50%); /* Center text vertically */
+
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 127.9%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 0.35538em;
+}
+/* Main Content */
+.aboutContainer {
+  display: flex;
+  width: 100%;
+  /* margin: 0 auto; */
+  padding: 20px;
+}
+.aboutContent {
+  margin-top: 100px;
+}
+.videosContainer {
+  /* margin-left: 50px; */
+  width: 550px;
+  height: 600px;
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  /* margin-right: 40px;  */
+  overflow: hidden; /* Ensures video does not overflow */
+  /* position: relative; */
+}
+.videoContent {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the vertical video fills the container */
+  border-radius: 20px;
+}
+
+.videosContainer span {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Paragraph */
+.pp {
+  max-width: 80%;
+  margin: 40px auto 20px;
+  text-align: left;
+  font-family: "Raleway", sans-serif;
+  font-style: italic;
+  font-size: 48px;
+  line-height: 1.4;
+}
+
+/* Explore Button */
+.explore-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  bottom: 130px; /* Adjust for exact positioning */
+  left: 50%;
+  transform: translateX(-50%); /* Centers it */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.explore-btn {
+  z-index: 100;
+  width: 150px;
+  height: 40px;
+  border: 2px solid currentColor;
+  border-radius: 20px;
+  background-color: transparent;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover and Active States */
+.explore-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.explore-btn:active {
+  transform: scale(0.95);
+}
+
+/* Explore Arrow */
+.explore-arrow {
+  margin-top: -60px;
+  width: 100px;
+  height: auto;
+  filter: invert(1); /* Makes arrow white when bg is dark */
+}
+
+/* Quote Section */
+.quote-heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 40px;
+  text-align: left;
+  margin-left: 10%;
+}
+
+.quote-box {
+  width: 80%;
+  max-width: 600px;
+  min-height: 150px;
+  background: linear-gradient(to right, #d3d3d3, #e0e0e0);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  margin: 20px 0 0 10%;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quote-text {
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-size: 22px;
+  text-align: left;
+  padding: 10px;
+  max-width: 90%;
+  line-height: 1.5;
+  color: #333;
+}
+
+.quote-author {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+  margin-top: 10px;
+  color: black;
+}
+.languages-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.lang-label {
+  color: #d7d7d7;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 5px;
+}
+
+.lang-button {
+  font-family: "Montserrat", sans-serif;
+
+  position: relative;
+  padding: 8px 12px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.lang-button::after {
+  content: attr(data-hover); /* Get text from data-hover attribute */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  color: black;
+  font-weight: bold;
+}
+
+.lang-button:hover {
+  background-color: white;
+  color: transparent; /* Hide original text */
+}
+
+.lang-button:hover::after {
+  opacity: 1;
+}
+
+.lang-button.learning {
+  border-color: #f4c542;
+  color: #f4c542;
+  font-weight: bold;
+}
+
+.lang-button.learning:hover {
+  background-color: #f4c542;
+  color: black;
+}

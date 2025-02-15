@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Barlow Semi Condensed", sans-serif; */
+}
+
+body {
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Skills Container */
+.skills-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.skills-title {
+  color: #fff;
+  font-family: "hkgrosteskwide";
+  font-size: 15vw;
+  font-weight: 900;
+  line-height: 1;
+  position: relative;
+  /* visibility: hidden; */
+  white-space: nowrap;
+}
+.skill-me-svg {
+  width: 65%;
+  max-width: 250px;
+  height: auto;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Card Style */
+.card {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.card:hover {
+  width: 600px;
+  transition-delay: 0.5s;
+}
+
+/* Glowing Circle */
+.circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  width: 470px;
+  height: 470px;
+  border-radius: 50%;
+  background: #191919;
+  border: 8px solid var(--clr);
+  filter: drop-shadow(0 0 10px var(--clr)) drop-shadow(0 0 60px var(--clr));
+  transition: 0.5s, background 0.5s;
+}
+
+.card:hover .circle::before {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: var(--clr);
+}
+
+/* Skill Logo - Initially White */
+.logo {
+  width: 250px;
+  filter: brightness(0) invert(1); /* Makes the image white */
+  transition: 0.5s;
+}
+
+/* On Hover - Logo disappears */
+.card:hover .logo {
+  transform: scale(0); /* Hides the logo */
+  transition-delay: 0s;
+}
+
+/* Card Background - Initially White */
+.card {
+  background: transparent;
+  position: relative;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+/* On Hover - Background turns black */
+.card:hover {
+  background: black;
+  transition-delay: 0.5s;
+}
+
+/* Content - Initially Hidden */
+.content {
+  position: absolute;
+  width: 60%;
+  left: 10%;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  color: black; /* Makes content visible initially */
+  transition: opacity 0.5s, visibility 0.5s, color 0.5s;
+}
+
+/* On Hover - Content Appears */
+.card:hover .content {
+  transition-delay: 0.75s;
+  opacity: 1;
+  visibility: visible;
+  color: white; /* Changes text to white */
+  left: 5%;
+}
+
+.content h2 {
+  color: white;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.content p {
+  color: white;
+}
+
+.content a {
+  background: #222;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  margin-top: 15px;
+}
+@media (max-width: 1250px) {
+  .skills-grid {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    /* gap: 20px; */
+    position: relative;
+  }
+  .card {
+    position: absolute;
+    margin-top: -200px;
+    width: 350px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+    cursor: pointer;
+    padding-top: 1px;
+  }
+
+  .card::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px; /* This makes the hover area only 1px */
+    bottom: 0;
+    left: 0;
+  }
+
+  .card:hover::after {
+    height: 100%; /* Expands on hover */
+  }
+
+  .card:hover {
+    transform: translateY(-150px); /* Moves up on hover */
+    width: 600px;
+
+    transition-delay: 0.1s;
+  }
+
+  /* Change Circle to Card */
+  .circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px; /* Rounded edges instead of a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--clr); /* Keep the color */
+    transition: 0.5s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow */
+  }
+
+  /* .circle::before {
+    display: none; 
+  } */
+
+  .circle::before {
+    content: "";
+    position: absolute;
+    width: 550px;
+    height: 100%;
+    border-radius: 20px; /* Slightly rounded corners instead of a circle */
+    background: #191919;
+    border: 8px solid var(--clr);
+    filter: drop-shadow(0 0 10px var(--clr)) drop-shadow(0 0 60px var(--clr));
+    transition: 0.5s, background 0.5s;
+  }
+
+  .card:hover .circle::before {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: var(--clr);
+  }
+
+  .circle::before {
+    content: "";
+    position: absolute;
+    width: 550px;
+    height: 100%;
+    border-radius: 20px; /* Slightly rounded corners instead of a circle */
+    background: #191919;
+    border: 8px solid var(--clr);
+    filter: drop-shadow(0 0 10px var(--clr)) drop-shadow(0 0 60px var(--clr));
+    transition: 0.5s, background 0.5s;
+  }
+
+  .card:hover .circle::before {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: var(--clr);
+  }
+
+  /* Skill Logo - Initially White */
+  .logo {
+    width: 250px;
+    filter: brightness(0) invert(1); /* Makes the image white */
+    transition: 0.5s;
+  }
+
+  /* On Hover - Logo disappears */
+  .card:hover .logo {
+    transform: scale(0); /* Hides the logo */
+    transition-delay: 0s;
+  }
+
+  /* Card Background - Initially White */
+  .card {
+    background: transparent;
+    position: relative;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  /* On Hover - Background turns black */
+  .card:hover {
+    background: black;
+    transition-delay: 0.1s;
+  }
+}

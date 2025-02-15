@@ -1,0 +1,27 @@
+.clock-menu {
+  position: fixed;
+  top: 50%;
+  left: -150px;
+  transform: translateY(-50%);
+  width: 200px;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.menu-item {
+  display: block;
+  margin: 10px 0;
+  color: white;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.menu-item.active {
+  font-size: 1.2rem;
+  color: #ff6600;
+  font-weight: bold;
+}

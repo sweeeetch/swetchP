@@ -1,0 +1,92 @@
+/* Container for the board */
+.board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  width: 100vw; /* Full screen width */
+  overflow: hidden;
+  position: relative;
+}
+
+/* Responsive Background Grid */
+
+/* Profile container */
+.profile-container {
+  z-index: 2; /* Bring the content above the grid */
+  text-align: center;
+  padding: 1rem;
+  max-width: 90%; /* Ensures it doesn't overflow on small screens */
+  margin: 0 auto;
+}
+
+/* Board Title */
+.board-title {
+  font-size: clamp(1.5rem, 5vw, 3rem); /* Responsive title size */
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.profile-image {
+  width: clamp(300px, 40vw, 500px); /* Increased minimum and maximum size */
+  height: clamp(300px, 40vw, 500px); /* Increased minimum and maximum size */
+  border-radius: 50%; /* Makes the image circular */
+  border: 5px solid #fff; /* White border around the image */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Optional glow effect */
+  outline: 2px solid #333; /* Outer stroke for an additional layer */
+  outline-offset: 5px; /* Space between the border and the outline */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation */
+}
+
+.profile-image:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Stronger glow on hover */
+}
+
+/* Contact Section */
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Space between icon and text */
+  margin-top: 1rem;
+  font-size: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  background: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+  font-size: clamp(0.8rem, 1vw, 1rem); /* Responsive font size */
+}
+
+.contact a:hover {
+  background: #555;
+}
+
+.contact span {
+  font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive icon size */
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 768px) {
+  .background-grid {
+    background-size: 1.5rem 1.5rem; /* Tighter grid for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 0.5rem;
+  }
+
+  .board-title {
+    font-size: clamp(1.2rem, 4vw, 2rem); /* Slightly smaller title */
+  }
+}
