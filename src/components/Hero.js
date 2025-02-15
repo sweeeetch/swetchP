@@ -1,6 +1,6 @@
-import React, { useEffect, lazy } from "react";
+import React, { useEffect } from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import profileImage from "../imgs/pointing.png"; // Import the image file
+// import profileImage from "../imgs/pointing.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Hero.css";
