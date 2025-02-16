@@ -26,7 +26,7 @@ const Hero = () => {
     const split = new SplitType(".txt-wrapper p", {
       types: "lines, words, chars",
     });
-    const sections = gsap.utils.toArray("section");
+    // const sections = gsap.utils.toArray("section");
 
     const tl = gsap.timeline({
       scrollTrigger: {
